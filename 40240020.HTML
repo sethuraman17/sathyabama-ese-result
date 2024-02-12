@@ -1,0 +1,202 @@
+<html lang="en">
+
+<head>
+    <title>SIST-ESE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="sathyabama logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <style>
+        .fail {
+            background-color: red;
+            color: white;
+        }
+
+        .absent {
+            background-color: orange;
+            color: white;
+        }
+
+        .withheld {
+            background-color: #831238;
+            color: white;
+            text-align: center;
+        }
+
+        .stuinfo {
+            background-color: #831238;
+            color: white;
+        }
+
+        .spacing {
+            margin-left: 20px;
+        }
+
+        #tblNote {
+            color: #0000FF;
+        }
+        .junni{
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+    <div class="container-fluid" style="margin-top:0px">
+        <div id="nav-placeholder">
+            <style>
+                .navbar-default {
+                    background-color: #4A235A;
+                }
+
+                .navbar-default .navbar-brand {
+                    color: gold;
+                }
+            </style>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand"><img id="logo" src="Screenshot (3).png" alt="SIST" height="25px"
+                                width="25px"></a>
+                        <a class="navbar-brand" href="http://www.sathyabama.ac.in" class="junni">SATHYABAMA</a>
+                    </div>
+                    <button class="btn btn-success navbar-btn" id="btnPrint" onclick="window.print()"><i
+                            class="fa fa-print" style="font-size:16px;"></i> Print</button>
+                    <button class="btn btn-success navbar-btn" id="btnExport" onclick="exportToExcel()"><i
+                            class="fa fa-file-text-o" style="font-size:16px;"></i> Export</button>
+                    <div class="nav navbar-nav navbar-right">
+                        <button type="submit" class="btn btn-warning navbar-btn" id="btnLogout"
+                            onclick="window.location='logout.php'"><i class="fa fa-sign-out"
+                                style="font-size:16px;"></i> Logout </button>
+                    </div>
+                </div>
+            </nav>
+            <script src="js/noback.js"></script>
+        </div>
+
+        <div style="text-align: center;" class="bg-warning" id="header2">
+            <font color="#831238">
+                <h1 style="text-align: center;"><strong>S A T H Y A B A M A</strong></h1>
+                <h6 style="text-align: center;"> INSTITUTE OF SCIENCE AND TECHNOLOGY</h6>
+                <p style="text-align: center">(Deemed to be University)</p>
+                <h3 style="text-align: center">End Semester Examination Results - MAY 2023<br>
+                </h3>
+                <!-- <h3 style="text-align: center;">Regular Courses</h3> -->
+
+            </font>
+        </div>
+        <!-- <font color="red" style="text-align: center;"> <strong><a href="http://www.sathyabama.ac.in/revaluation_home.php"><h1 style="text-align: center; text-color: red">Click Here to Apply for Revaluation</h1></a></strong></font> -->
+        <!-- <font color="red" style="text-align: center;"> <strong><a href="http://www.sathyabama.ac.in/arrearfees_home.php"><h1 style="text-align: center; text-color: red">Click Here to Pay Arrear Fee</h1></a></strong></font> -->
+        <div id="tblData" class="table-responsive">
+
+            <table id="tblInfo" class="table">
+                <tbody>
+                    <tr class="stuinfo">
+                        <td>Register Number: 40240020</td>
+                        <td>Student Name: MOHAMMED THOUFEEQ A </td>
+                        <td>Programme: Bachelor of Technology - BIOMEDICAL ENGINEERING</td>
+                        <td>Batch: 2020-2024</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="tblDisplay" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Semester</th>
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Course Type</th>
+                        <th>Internal Marks</th>
+                        <th>External Marks</th>
+                        <th>Total</th>
+                        <th>Max. Marks</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>SBMA3004</td>
+                        <td>Analytical Instrumentation</td>
+                        <td>Theory</td>
+                        <td>36</td>
+                        <td>40</td>
+                        <td>76</td>
+                        <td>100</td>
+                        <td>Pass</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>SBAA4004</td>
+                        <td>Venture Creation</td>
+                        <td>practical</td>
+                        <td>43</td>
+                        <td>33</td>
+                        <td>76</td>
+                        <td>100</td>
+                        <td>Pass</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <table id="tblNote" class="table">
+                <tbody>
+                    <tr>
+                        <td>
+                            <font color="#831238">
+                                <dl>
+                                    <dt>Disclaimer : The institution is not responsible for any inadvertent error that
+                                        may have crept in the results being published in the internet.</dt>
+                                    <dt>PLEASE NOTE: <br>
+                                        <ul>
+                                            <!-- <li><a href="https://fees.sathyabama.ac.in/arrearfees_home.php">Click Here to pay Arrear Fees</a></li> -->
+                                            <li>
+                                                Minimum requirement for pass in each subject: Should have secured a
+                                                minimum of 30% in the End Semester Examinations and also a minimum of
+                                                50% in total maximum marks. </li>
+
+
+                                            <!--li>Arrear Fee payment portal will be opened from 05<sup>th</sup> March 2021 onwards. Last date for arrear fee payment is 20<sup>th</sup> March 2021</li-->
+                                            <!--li>Arrear Examination will commence in the first week of April 2021</li-->
+                                            <!-- li>As per UGC guidelines the students who are not satisfied with the results may appear for the same examination in the subsequent semester.</li-->
+                                            <li>The Results published in the internet are for immediate information to
+                                                the examinees. This cannot be treated as Original Mark Sheets</li>
+                                            <!--li>The results are published in the internet for all programmes and all batches for current semester courses only.</li-->
+                                            <li>For any Clarifications regarding the results, please MAIL TO :
+                                                <u>coe@sathyabama.ac.in</u> with details of your Name, Register Number
+                                                and your Query</li>
+                                            <li><a href="https://fees.sathyabama.ac.in/revaluation_home.php">Click here
+                                                    to apply for revaluation</a></li>
+                                        </ul>
+                                    </dt>
+                                    <br>
+                                    <!-- <font color="red">
+                                <strong><center>Revaluation Portal will be activated shortly.</center></strong>                                
+                            </font> -->
+
+                                </dl>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/noback.js"></script>
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("html/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>
